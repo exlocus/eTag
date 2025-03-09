@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eTag: 404</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: "Lexend", sans-serif;
+            font-weight: bold;
+        }
+        h1, h3 {
+            margin: 0;
+            background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s linear infinite;
+        }
+        h1 {
+            font-size: 15vh;
+        }
+        h3 {
+            font-size: 5vh;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 150% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <h3>Не найдено</h3>
+</body>
+</html>

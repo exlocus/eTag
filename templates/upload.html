@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eTag: Upload</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: "Lexend", sans-serif;
+      font-weight: bold;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    }
+    .logo {
+      font-size: 4vh;
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: rainbow 5s linear infinite;
+    }
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 150% 50%; }
+    }
+    .telegram img {
+      width: 4vh;
+      height: 4vh;
+    }
+    .telegram {
+      margin-right: 40px;
+    }
+    .form-container {
+      text-align: center;
+      margin-top: 100px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #1c1c1c;
+    }
+    input[type="file"],
+    input[type="text"] {
+      margin: 10px 0;
+      padding: 10px;
+      background: #1c1c1c;
+      border-radius: 5px;
+      width: 95%;
+      border: none;
+      color: white;
+    }
+    input[type="text"]:nth-child(2) {
+        margin: 0;
+    }
+    input[type="text"]::placeholder {
+      color: #aaa;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 300% 100%;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+    button:hover {
+      animation: rainbow 5s linear infinite;
+    }
+    .message {
+      font-family: "Lexend", sans-serif;
+      font-weight: normal;
+      margin-top: 20px;
+    }
+    .library-link {
+      margin-top: 20px;
+      display: block;
+      color: #ff416c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">eTag</div>
+    <div class="telegram">
+      <a href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Telegram_Messenger.png/800px-Telegram_Messenger.png" alt="@exLocus: Telegram">
+      </a>
+    </div>
+  </header>
+  <div class="form-container">
+    <h2>Загрузите звук</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="audio/mpeg">
+      <input type="text" name="title" placeholder="Введите название звука (опционально)">
+      <input type="text" name="image_url" placeholder="Введите прямую ссылку на изображение/GIF (опционально)">
+      <button type="submit">Загрузить</button>
+    </form>
+    <p class="message">{{ message|safe }}</p>
+    <a href="{{ url_for('library') }}" class="library-link">Библиотека звуков</a>
+  </div>
+</body>
+</html>

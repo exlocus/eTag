@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>eTag: Sound</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        button {
+            all: unset;
+        }
+        .play-button {
+            width: 100%;
+            height: 100%;
+            font-size: 500%;
+            text-align: center;
+            font-family: "Lexend", sans-serif;
+            font-weight: bold;
+            background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s linear infinite;
+        }
+        .subinfo {
+            margin: 0;
+            font-size: 3vh;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 150% 50%; }
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ image_url if image_url else '' }}'); background-color: {{ 'black' if not image_url else 'transparent' }};">
+    <button class="play-button" onclick="playAudio()">eTag by @exLocus<br><p class="subinfo">uuid: {{sound_id}} | name: {{title}}</p></button>
+    <audio id="welcome-audio">
+        <source src="{{ url_for('get_uploaded_file', filename=sound_id + '.mp3') }}" type="audio/mpeg">
+        Ваш браузер не поддерживает элемент audio.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('welcome-audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
