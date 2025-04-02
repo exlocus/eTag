@@ -16,8 +16,8 @@
 1. **Клонируйте репозиторий**:
 
    ```bash
-   git clone https://github.com/yourusername/soundtag-plus.git
-   cd soundtag-plus
+   git clone https://github.com/exlocus/eTag.git
+   cd eTag
    ```
 
 2. **Создайте и активируйте виртуальное окружение**:
