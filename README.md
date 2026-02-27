@@ -1,4 +1,4 @@
-eTag 🎵
+# eTag 🎵
 
 [**Русская версия / Russian Version**](README.ru.md)
 
