@@ -1,8 +1,8 @@
 # eTag 🎵
 
-[**Русская версия / Russian Version**](README.ru.md)
-
 ## 📋 Project description
+
+[**Русская версия / Russian Version**](README.ru.md)
 
 Welcome to **eTag** — an improved version of [SoundTag](https://soundtag.ru/).
 
