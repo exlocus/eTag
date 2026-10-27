@@ -4,7 +4,7 @@
 
 [**Русская версия / Russian Version**](README.ru.md)
 
-Welcome to **eTag** — an improved version of [SoundTag](https://soundtag.ru/).
+Welcome to **eTag** — an improved version of SoundTag.
 
 ## 🚀 Functional capabilities
 
@@ -63,4 +63,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-*Note: **eTag** is an improved version of the original [SoundTag](https://soundtag.ru/), offering additional features and an enhanced user interface.*
+*Note: **eTag** is an improved version of the original SoundTag, offering additional features and an enhanced user interface.*
